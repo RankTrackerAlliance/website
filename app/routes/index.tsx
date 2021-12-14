@@ -166,15 +166,16 @@ export default function Index() {
         <div className={tw`h-8`} />
         <div className={tw`flex gap-12 flex-wrap items-center justify-center`}>
           {[
-            require('../images/logos/nozzle.svg'),
-            require('../images/logos/seoclarity.png'),
-          ].map((logoSrc) => {
+            [require('../images/logos/nozzle.svg'), 'https://nozzle.io'],
+            [
+              require('../images/logos/seoclarity.png'),
+              'https://seoclarity.net',
+            ],
+          ].map(([logoSrc, href]) => {
             return (
-              <img
-                key={logoSrc}
-                src={logoSrc}
-                className={tw`w-[250px] max-w-full`}
-              />
+              <a key={logoSrc} href={href}>
+                <img src={logoSrc} className={tw`w-[250px] max-w-full`} />
+              </a>
             )
           })}
         </div>

@@ -2,6 +2,7 @@ import { tw } from 'twind/css'
 import type { MetaFunction } from 'remix'
 import { Link } from 'remix'
 import { FaGithub } from 'react-icons/fa'
+import { AiOutlineRead } from 'react-icons/ai'
 
 import headerImg from '../images/header.png'
 
@@ -155,7 +156,7 @@ export default function Index() {
       </div>
       <div className={tw`h-4`} />
       <div
-        className={tw`relative max-w-screen-md mx-2 rounded-md p-8 shadow-lg md:(mx-auto) bg-gray-800 text-white dark:(bg-gray-700)`}
+        className={tw`relative max-w-screen-md mx-2 rounded-md p-8 shadow-lg md:(mx-auto) bg-gray-700 text-white`}
       >
         <div className={tw`text-3xl text-center`}>Who runs the RTA?</div>
         <div className={tw`h-4`} />
@@ -180,7 +181,42 @@ export default function Index() {
           })}
         </div>
       </div>
-
+      <div className={tw`h-4`} />
+      <div
+        className={tw`relative max-w-screen-md mx-2 rounded-md p-8 shadow-lg md:(mx-auto) text-white bg-green-600`}
+      >
+        <div
+          className={tw`text-center`}
+          style={{
+            textShadow: '0px 10px 30px rgba(0, 0, 0, 0.5)',
+          }}
+        >
+          <div className={tw`text-3xl`}>Ready to dig in?</div>
+          <div className={tw`h-6`} />
+          <div className={tw`inline-block w-[400px]`}>
+            More details are available in our presentation on the spec below. It
+            covers:
+          </div>
+          <div className={tw`h-6`} />
+          <ul className={tw`inline-block text-left list-disc pl-8 font-bold`}>
+            <li>Technical implementation details</li>
+            <li>Cost structures and billing agreements</li>
+            <li>FAQ</li>
+            <li>Questions and Discussion Points</li>
+          </ul>
+        </div>
+        <div className={tw`h-8`} />
+        <div className={tw`text-center`}>
+          <a
+            href="https://docs.google.com/presentation/d/1ab7lzBILDb_7UZ9fLEKj5fJhEKlXm1dZudeHCT_3JCg/edit?usp=sharing"
+            target="_blank"
+            className={tw`text-2xl inline-flex gap-2 items-center bg-white text-green-700 rounded-lg py-2 px-4 shadow-md`}
+          >
+            <AiOutlineRead />
+            <span>Read the Spec</span>
+          </a>
+        </div>
+      </div>
       <div className={tw`h-20`} />
       <div className={tw`bg-gray-800 text-white shadow-lg`}>
         <div className={tw`max-w-screen-md mx-auto py-12 px-4`}>

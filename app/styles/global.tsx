@@ -4,7 +4,7 @@ import { css, apply } from 'twind/css'
 export const getGlobalStyles = () => css`
   html,
   body {
-    ${apply`text-blue-900 bg-gray-100 dark:bg-gray-900 dark:text-gray-100`}
+    ${apply`text-gray-900 bg-gray-100 dark:bg-gray-900 dark:text-gray-100`}
   }
 
   @media (prefers-color-scheme: dark) {
